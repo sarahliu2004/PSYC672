@@ -1,0 +1,60 @@
+\documentclass[a4paper,man,natbib,floatsintext,12pt]{apa7}
+
+\usepackage[english]{babel} %character and hyphenation rules specific to the language you choose
+%\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{blindtext}
+\usepackage{tabularx} %great for APA-style Tables
+\usepackage{siunitx} % Required for good table ali gnmen
+\usepackage{threeparttable}
+
+\sisetup{
+  round-mode          = places, % Rounds numbers
+  round-precision     = 2, % to 2 places
+}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{wrapfig}
+\usetikzlibrary{shapes,decorations,arrows,calc,arrows.meta,fit,positioning}
+\tikzset{
+    -Latex,auto,node distance =1 cm and 1 cm,semithick,
+    latent/.style ={ellipse, draw, minimum width = 0.7 cm},
+    observed/.style ={rectangle, draw},
+    bidirected/.style={Latex-Latex,dashed},
+    el/.style = {inner sep=2pt, align=left, sloped}
+}
+\newcommand{\sigFtest}[4]{\textit{F}(#1,#2) = #3, \textit{p}$<$#4}
+\newcommand{\nonsigFtest}[3]{\textit{F}(#1,#2) = #3, \textit{p}$>$.05}
+
+
+\title{ Laugh with family or strangers? Explore the role of social connectedness in the perception of laughter contagion  }
+\shorttitle{Laughter Contagion}
+\author{Sarah Liu}
+\authorsaffiliations{College of William \& Mary}
+\journal{Laughter Journal}
+
+\abstract{\blindtext}
+\keywords{APA style, demonstration}
+\authornote{Thanks for my cat helping me write this paper}
+
+\leftheader{Alternate page header in man mode}
+
+%-------------- END PREAMBLE  -------------------
+
+
+\begin{document}
+
+\maketitle  %Insert my APA style title page
+
+\input{introduction}
+\input{method.tex}
+\input{Result}
+\input{discussion}
+\bibliography{reference}
+
+
+
+\end{document}
