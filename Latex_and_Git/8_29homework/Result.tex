@@ -1,4 +1,30 @@
 \section{Results}
+\subsection{Network Mapping}
+
+A network mapping is developed to visualize the strength of the social connectedness between laughers and listeners, based on the rating of closeness (Figure \ref{fig:network}). The line type denotes the level of social connectedness, with dashed lines representing low connectedness (closeness rating between 2 to 4), thin lines representing moderate connectedness (closeness rating between 4 to 7), and thick lines representing strong connectedness (closeness rating between 7 to 10); social relationship with a rating lower than 2 was considered as too low to indicate the prescence of a social bonding and therefore not represented on the diagram. From the graph, laughers are more or less socially connected to others, representing a variety of social relationships. 
+For illustration purposes, this map only presents social relationships among 17 laughers. Their family or friends who took part but did not provide laughter recordings were not represented in this map, as they only knew a few laughers (one or two laughers).
+
+\begin{figure}[ht!]
+\centering
+\caption{Social network mapping between laughers.}
+\label{fig:network}
+\begin{tikzpicture}[scale=.4,auto,node distance=.9cm,
+latent/.style={circle,draw,very thick,inner sep=0pt,minimum size=20mm,align=center}]
+\node [latent] (Amy) at (0,0) {Amy};
+\node [latent] (Peter) [right=4.5cm of Amy] {Peter};
+\node [latent] (Bob) [below=4.5cm of Amy] {Bob};
+\node [latent] (Scott) [below=4.5cm of Peter] {Scott};
+\node [latent] (Sally) at (8, -8) {Sally};
+\path[<->, line width =.3mm](Amy)edge(Peter);
+\path[<-, line width =.8mm](Amy)edge(Bob);
+\path[line width =.8mm](Amy)edge [bend left] node [left] {} (Scott);
+\draw[dotted, line width = .5mm] (Amy)edge(Sally);
+\path[<->, line width =.3mm](Scott)edge(Peter);
+\draw[dotted, line width = .5mm] (Sally)edge(Peter);
+
+\end{tikzpicture}
+\end{figure}
+
 \subsection{Descriptive statistics}
 Descriptive statistics, including the mean and standard deviation of connectedness rating and contagion rating across two conditions of informing, are presented in Table \ref{tab:table1}. Together with Figure 5, when no names of laughter were given before listening to the recordings (i.e., uninformed condition), the social connectedness ratings predicted a linear relationship with the contagion rating. In contrast, when the name was given (i.e. informed condition), there was a boost effect for contagion ratings at lower social connectedness ratings.
 
@@ -22,5 +48,4 @@ Descriptive statistics, including the mean and standard deviation of connectedne
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
-
 
